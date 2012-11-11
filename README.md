@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-imageuploadncrop
-================
-=======
 imguploadncrop
 ==============
 >>>>>>> branch 'master' of https://github.com/Kephson/imguploadncrop.git
