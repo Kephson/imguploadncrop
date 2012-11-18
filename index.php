@@ -23,7 +23,7 @@ include_once('includes/config.php');
 		
 		<!-- title begin -->
 		<div class="title">
-			<h1>Ajax Image-Upload and Crop - Demo</h1>
+			<h1>jQuery Image-Upload and Crop - Demo</h1>
 		</div>
 		<!-- title end -->
 
