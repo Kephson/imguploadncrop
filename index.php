@@ -127,10 +127,6 @@ include_once('includes/config.php');
 										<td>Y2:</td>
 										<td><input type="text" class="y2" size="5" value="" /></td>
 									</tr>
-									<tr>
-										<td>Direction (exif-data):</td>
-										<td><input type="text" class="exifdata" size="40" value="" /></td>
-									</tr>
 								</table>
 							</div>
 						</div>
