@@ -16,6 +16,8 @@ if ($_GET['act'] == 'thumb') {
 		'thumb' => true,
 		'fileError' => $fileError,
 		'sizeError' => $sizeError,
+		'maxfilesize' => $maxuploadfilesize,
+		'canvasbg' => $canvasbg,
 	);
 	resizeThumb($arr);
 	exit;
@@ -30,6 +32,8 @@ if ($_GET['act'] == 'thumb') {
 		'y' => 0,
 		'fileError' => $fileError,
 		'sizeError' => $sizeError,
+		'maxfilesize' => $maxuploadfilesize,
+		'canvasbg' => $canvasbg,
 	);
 
 	resizeImg($big_arr);

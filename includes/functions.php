@@ -27,11 +27,12 @@ function resizeImg($arr){
 	$temp_uploadfile = $tempdir . $new_name;
 	$new_uploadfile = $uploaddir . $new_name;
 	
-	// less than 3MB
-	if($_FILES['photo']['size'] < 3200000){
+	// less than 3MB default
+	if($_FILES['photo']['size'] < $arr['maxfilesize']){
 		if (move_uploaded_file($temp_name, $temp_uploadfile)) {
 
 		/****** Check EXIF ******/
+		// reading the image orientation
 		$arr['orientation']=checkExifOrientation($temp_uploadfile);
 		/****** Check EXIF END ******/
 
@@ -86,7 +87,7 @@ function asidoImg($arr){
 		Asido::Crop($i1, $x, $y, $width, $height);
 	}
 	else{
-		// rotate the image
+		// rotate the image if it is portrait
 		switch($arr['orientation'])
 		{
 			case 1: // nothing
@@ -109,7 +110,7 @@ function asidoImg($arr){
 				Asido::Rotate($i1,-90);
 			break;
 		}
-		Asido::Frame($i1, $width, $height, Asido::Color(255, 255, 255));		
+		Asido::Frame($i1, $width, $height, Asido::Color($arr['canvasbg']['r'],$arr['canvasbg']['b'],$arr['canvasbg']['g']));		
 	}
 
 	// always convert to jpg	

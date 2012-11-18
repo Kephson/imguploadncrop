@@ -15,7 +15,13 @@ $fileError='Filetype not allowed. Please upload again. Only GIF, JPG and PNG fil
 $sizeError='File is too big. Please upload again. Maximum filesize is 1.3MB.';
 
 // image upload folders
-$imgthumb='uploads/';
-$imgtemp='uploads/temp/';
-$imgbig='uploads/big/';
+$imgthumb='uploads/'; // folder for the uploads after cropping
+$imgtemp='uploads/temp/'; // temp-folder before cropping
+$imgbig='uploads/big/'; // folder with big uploaded images
+
+// max file-size for upload in bytes, default: 3mb
+$maxuploadfilesize=3200000;
+
+// background color of the canvas as rgb, default:white
+$canvasbg=array('r'=>255,'g'=>255,'b'=>255);
 ?>

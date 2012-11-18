@@ -1,4 +1,4 @@
-var aspectRatio='2:1'; // ration of the images
+var aspectRatio='2:1'; // ratio of the image
 var x1=152; // x1 for the image selection start
 var y1=75; // y1 for the image selection start
 var x2=252; // x2 for the image selection start
@@ -29,10 +29,22 @@ $(document).ready(function() {
 	
 	$("#file").live('change',function(){
 		if($("#file").val()!=''){
+			$('#notice').text(uploadingtext).fadeIn();
 			$("#upload_big").submit();
 		}
+		else {
+			$('.notice').hide();
+		}
 	});
-
+	
+	$("#upload_thumb").submit(function() {
+		$('#upload_thumb').hide();
+		if(useMobile){
+			$('.mobileSelection').hide();
+		}
+		$('#notice2').text(creatingtext).fadeIn();
+	});
+	
 	$("form.uploaderForm").submit(function() {
 		
 		// get the sended form
@@ -45,9 +57,6 @@ $(document).ready(function() {
 				$('#notice2').text(alertText).fadeIn();
 				return false;
 			}
-		}
-		else {
-			$('.notice').hide();
 		}
 		
 		// hide Imageareaselect first
@@ -70,7 +79,6 @@ $(document).ready(function() {
 				$('.img_src').attr('value',img);
 			
 				if(fname == 'upload_big'){
-					$('#notice').text(uploadingtext).fadeIn();
 
 					// load to preview image
 					$('#preview').html(img);
@@ -112,7 +120,6 @@ $(document).ready(function() {
 					});
 				}
 				else {
-					$('#notice2').text(creatingtext).fadeIn();
 
 					//used the standard selection?
 					if(selWidth==0||selHeight==0){
@@ -127,10 +134,7 @@ $(document).ready(function() {
 					$('#details .y1').val('');
 					$('#details .x2').val('');
 					$('#details .y2').val('');
-					$('#upload_thumb').hide();
-					if(useMobile){
-						$('.mobileSelection').hide();
-					}
+
 				}
 				
 				$('.notice').fadeOut();
