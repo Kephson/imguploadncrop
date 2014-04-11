@@ -2,6 +2,7 @@
 - changed image library from asido to wideimage
 - added comments, cleaned the code
 - added the upload folder, so you don't have to add this :-)
+- added a fix for rotating images (presaved as temp images)
 
 17.11.2012:
 - more comments and more configuration now possible
