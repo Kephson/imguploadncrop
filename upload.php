@@ -1,5 +1,6 @@
 <?php
-error_reporting(0);
+// disable error if you want
+//error_reporting(0);
 
 include_once('includes/config.php');
 include_once('includes/functions.php');
@@ -18,6 +19,8 @@ if ($_GET['act'] == 'thumb') {
 		'sizeError' => $sizeError,
 		'maxfilesize' => $maxuploadfilesize,
 		'canvasbg' => $canvasbg,
+		'bigWidthPrev' => $bigWidthPrev,
+		'bigHeightPrev' => $bigHeightPrev,
 	);
 	resizeThumb($arr);
 	exit;
@@ -30,10 +33,13 @@ if ($_GET['act'] == 'thumb') {
 		'width' => $_POST['width'],
 		'x' => 0,
 		'y' => 0,
+		'thumb' => false,
 		'fileError' => $fileError,
 		'sizeError' => $sizeError,
 		'maxfilesize' => $maxuploadfilesize,
 		'canvasbg' => $canvasbg,
+		'bigWidthPrev' => $bigWidthPrev,
+		'bigHeightPrev' => $bigHeightPrev,
 	);
 
 	resizeImg($big_arr);
@@ -41,4 +47,3 @@ if ($_GET['act'] == 'thumb') {
 } else {
 	//nothing to do here
 }
-?>
