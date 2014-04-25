@@ -1,3 +1,6 @@
+25.04.2014:
+- added a fix for exif orientation
+
 11.04.2014:
 - changed image library from asido to wideimage
 - added comments, cleaned the code

@@ -77,7 +77,7 @@ function resizeThumb($arr) {
  */
 function checkExifOrientation($target) {
 	$exif = exif_read_data($target);
-	if ($exif['Orientation'] != '') {
+	if (isset($exif['Orientation']) && $exif['Orientation'] != '') {
 		return $exif['Orientation'];
 	} else {
 		return 1;
