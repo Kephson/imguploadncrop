@@ -4,7 +4,7 @@ $sizefactor = 3;
 
 // size of the big, preview and thumb container
 $bigWidthPrev = 400;
-$bigHeightPrev = 200;
+$bigHeightPrev = 400;
 
 // canvas size for the uploaded image
 $canvasWidth = $bigWidthPrev * $sizefactor;
