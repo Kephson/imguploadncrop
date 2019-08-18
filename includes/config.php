@@ -24,8 +24,7 @@ $maxuploadfilesize = 3200000;
 
 // background color of the canvas as rgb, default:white
 $canvasbg = array(
-	'r' => 255,
-	'g' => 255,
-	'b' => 255
+    'r' => 255,
+    'g' => 255,
+    'b' => 255
 );
-?>

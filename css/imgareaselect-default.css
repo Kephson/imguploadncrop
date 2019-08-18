@@ -3,39 +3,39 @@
  */
 
 .imgareaselect-border1 {
-	background: url("../img/border-v.gif") repeat-y left top;
+	background: url(../img/border-v.gif) repeat-y left top;
 }
 
 .imgareaselect-border2 {
-    background: url("../img/border-h.gif") repeat-x left top;
+	background: url(../img/border-h.gif) repeat-x left top;
 }
 
 .imgareaselect-border3 {
-    background: url("../img/border-v.gif") repeat-y right top;
+	background: url(../img/border-v.gif) repeat-y right top;
 }
 
 .imgareaselect-border4 {
-    background: url("../img/border-h.gif") repeat-x left bottom;
+	background: url(../img/border-h.gif) repeat-x left bottom;
 }
 
 .imgareaselect-border1, .imgareaselect-border2,
 .imgareaselect-border3, .imgareaselect-border4 {
-    opacity: 0.5;
-    filter: alpha(opacity=50);
+	filter: alpha(opacity=50);
+	opacity: 0.5;
 }
 
 .imgareaselect-handle {
-    background-color: #fff;
-    border: solid 1px #000;
-    opacity: 0.5;
-    filter: alpha(opacity=50);
+	background-color: #fff;
+	border: solid 1px #000;
+	filter: alpha(opacity=50);
+	opacity: 0.5;
 }
 
 .imgareaselect-outer {
-    background-color: #000;
-    opacity: 0.5;
-    filter: alpha(opacity=50);
+	background-color: #000;
+	filter: alpha(opacity=50);
+	opacity: 0.5;
 }
 
-.imgareaselect-selection {  
+.imgareaselect-selection {
 }
